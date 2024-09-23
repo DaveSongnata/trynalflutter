@@ -4,6 +4,10 @@ void main() {
   runApp(const MyApp());
 }
 
+
+
+
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -39,6 +43,14 @@ class _MyHomePageState extends State<MyHomePage> {
       
       _counter++;
     });
+
+  void _decrementCounter() {
+    setState(() {
+      
+      _counter--;
+    });
+
+
   }
 
   @override
@@ -67,11 +79,22 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
+      floatingActionButton: Row (
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',
         child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      ),
+      
+        FloatingActionButton(
+          onPressed: _decrementCounter,
+          tooltip: 'Decrement',
+          child: const Icon(Icons.remove),
+        ),
+        ]
+      ),
     );
   }
 }
