@@ -1,6 +1,7 @@
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:trynal/base/res/styles/app_styles.dart';
 import 'package:trynal/screens/home_screen.dart';
 
 class BottomNavBar extends StatefulWidget{
@@ -30,7 +31,7 @@ _selectedIndex = index;
   Widget build(BuildContext context) {
     return Scaffold(
        appBar: AppBar(
-        title: const Center(child: Text("MasterChamps")),
+        title: Center(child: Text("Meus SkyTickets", style: AppStyles.Title_2,)),
        ),
        body: Center(child: appScreens[_selectedIndex]),
        bottomNavigationBar: BottomNavigationBar(
