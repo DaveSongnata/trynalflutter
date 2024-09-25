@@ -1,6 +1,9 @@
+import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:trynal/base/res/media.dart';
 import 'package:trynal/base/res/styles/app_styles.dart';
+import 'package:trynal/base/widgets/app_double_text.dart';
+import 'package:trynal/base/widgets/ticket_view.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -8,6 +11,11 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+          backgroundColor: AppStyles.bgColor,
+        title: Center(child: Text("", style: AppStyles.Title_2,)),
+       ),
+      backgroundColor: AppStyles.bgColor,
         body: ListView(
            padding: const EdgeInsets.symmetric(horizontal: 5),
             children: [
@@ -24,7 +32,6 @@ class HomeScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                             Column(
-                              
                               crossAxisAlignment: CrossAxisAlignment.start,
                               
                               children: [
@@ -33,8 +40,7 @@ class HomeScreen extends StatelessWidget {
                               Text ("Reservas", style: AppStyles.Title_1),
                               SizedBox(height: 5),
                             ],),
-                          Container(
-                          
+                          Container(//n mexer
                                     width: 70,
                                     height: 70,
                                     decoration: BoxDecoration(
@@ -47,17 +53,27 @@ class HomeScreen extends StatelessWidget {
                   
                       ],
                     ), 
-                    
-                    
-                    
-                     Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [Text ("Procure por Viagens"), Text ("Skyflows")],
-                    ),
-                    
-                  ],
-                               
+                    SizedBox(height: 25),
+
+                     Container(
+                      padding: EdgeInsets.symmetric(horizontal: 12, vertical: 12),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: const Color.fromARGB(255, 255, 255, 255),
+                        
+
+                      ),
+                       child: 
+                       const Row(
+                        children: [Icon(FluentSystemIcons.ic_fluent_search_regular, color: Color(0xFFBFC205),), 
+                        Text ("  Pesquisar...")],
+                                           ),
+                     ),
+                     const SizedBox(height: 25),
+                    const AppDoubleText(bigText: 'Próximos Voos',smallText: 'Ver Mais',),
+                    const SizedBox(height: 25),
+                     TicketView(),
+                  ],     
                   ),
                 )
 

@@ -27,12 +27,11 @@ _selectedIndex = index;
 });
 }
 
+//navigation.push
+
 @override
   Widget build(BuildContext context) {
     return Scaffold(
-       appBar: AppBar(
-        title: Center(child: Text("Meus SkyTickets", style: AppStyles.Title_2,)),
-       ),
        body: Center(child: appScreens[_selectedIndex]),
        bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
