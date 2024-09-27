@@ -15,7 +15,7 @@ O layout inclui:
 
 ## Screenshots
 
-![Carrossel (Voos)](rmefiles\carrossel-voos.jpeg)
-![Carrossel (Hotéis)](rmefiles\carrossel-hoteis.jpeg)
-![Lista de Tickets](rmefiles\lista-tickets.jpeg)
-![Screenshot Completa](rmefiles\fullscreen.jpeg)
+![Carrossel (Voos)](rmefiles/carrossel-voos.jpeg)
+![Carrossel (Hotéis)](rmefiles/carrossel-hoteis.jpeg)
+![Lista de Tickets](rmefiles/lista-tickets.jpeg)
+![Screenshot Completa](rmefiles/fullscreen.jpeg)
