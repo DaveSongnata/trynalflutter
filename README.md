@@ -16,13 +16,13 @@ O layout inclui:
 ## Screenshots
 
 ### Carrossel (Voos)
-![Carrossel (Voos)](rmefiles/carrossel-voos.jpeg)
+<img src="rmefiles/carrossel-voos.jpeg" alt="Carrossel (Voos)" width="400"/>
 
 ### Carrossel (Hotéis)
-![Carrossel (Hotéis)](rmefiles/carrossel-hoteis.jpeg)
+<img src="rmefiles/carrossel-hoteis.jpeg" alt="Carrossel (Hotéis)" width="400"/>
 
 ### Lista de Tickets
-![Lista de Tickets](rmefiles/lista-tickets.jpeg)
+<img src="rmefiles/lista-tickets.jpeg" alt="Lista de Tickets" width="400"/>
 
 ### Screenshot Completa
-![Screenshot Completa](rmefiles/fullscreen.jpeg)
+<img src="rmefiles/fullscreen.jpeg" alt="Screenshot Completa" width="400"/>
