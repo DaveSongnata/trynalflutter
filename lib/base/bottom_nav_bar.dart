@@ -1,7 +1,7 @@
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:trynal/base/res/styles/app_styles.dart';
+//import 'package:trynal/base/res/styles/app_styles.dart';
 import 'package:trynal/screens/home_screen.dart';
 
 class BottomNavBar extends StatefulWidget{
