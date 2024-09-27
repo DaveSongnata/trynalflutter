@@ -7,7 +7,8 @@ import 'package:trynal/base/widgets/text_style_fourth.dart';
 import 'package:trynal/base/widgets/text_style_third.dart';
 
 class TicketView extends StatelessWidget { 
-  const TicketView({super.key});
+  final Map<String, dynamic> ticket;
+  const TicketView({super.key, required this.ticket});
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +17,7 @@ class TicketView extends StatelessWidget {
       width: size.width*0.80,
       height: 179,
       child: Container(
-        
+        margin: EdgeInsets.only(right: 12),
        
         child: Column(
           children: [
@@ -25,11 +26,12 @@ class TicketView extends StatelessWidget {
               //FIRST TICKET
             Container(
               padding: EdgeInsets.all(16),
+              
                 child: Column(
                   children: [
                       Row(
                         children: [
-                          TextStyleThird(text: "MAO"),
+                          TextStyleThird(text: ticket["from"]["code"]),
                              Expanded(child: Container()),
                           BigDot(),
                           Expanded(child: Stack(children: [
@@ -41,16 +43,16 @@ class TicketView extends StatelessWidget {
                             ],)),
                           BigDot(),
                              Expanded(child: Container()),
-                          TextStyleThird(text: "GRU"),
+                          TextStyleThird(text: ticket["to"]["code"]),
                         ],),
             
                     Row(
                         children: [
-                          SizedBox(width: 100, child: Text("Manaus", style: AppStyles.Title_3.copyWith(color: Colors.white))),
+                          SizedBox(width: 100, child: TextStyleFourth(text: ticket["from"]["name"])),
                              Expanded(child: Container()), 
-                         TextStyleThird(text: "08H 30M"),
+                          TextStyleThird(text: ticket["flying_time"].toString()),
                              Expanded(child: Container()),
-                          SizedBox(width: 100, child: TextStyleFourth(text: "Guarulhos", align: TextAlign.end,)),
+                          SizedBox(width: 100, child: TextStyleFourth(text: ticket["to"]["name"], align: TextAlign.end,)),
                         ],),
             
                   ],
@@ -79,18 +81,19 @@ child: Row(
             ),    
               //SECOND TICKET
             Container(
-              padding: EdgeInsets.all(16),
+              padding: EdgeInsets.all(12),
+            
                 child: Column(
                   children: [
                       Row(
                         children: [
-                          Text("17 MAI", style: AppStyles.Title_0.copyWith(color: Colors.white)),
+                          TextStyleThird(text: ticket["date"]),
                              Expanded(child: Container()),
                           Expanded(child: Stack(children: [
                             Text("17:30 PM", style: AppStyles.Title_0.copyWith(color: Colors.white)),
                             ],)),
                              Expanded(child: Container()),
-                          Text("223", style: AppStyles.Title_0.copyWith(color: Colors.white)),
+                          TextStyleFourth(text: ticket["number"].toString()),
                         ],),
             
                        Row(

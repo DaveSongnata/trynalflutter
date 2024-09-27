@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:trynal/base/res/styles/app_styles.dart';
 
 class AppDoubleText extends StatelessWidget {
-  const AppDoubleText({super.key, required this.bigText, required this.smallText});
+  const AppDoubleText({super.key, required this.bigText, required this.smallText, required this.func});
   final String bigText;
   final String smallText;
+  final VoidCallback func;
   
 
 
@@ -13,11 +14,11 @@ class AppDoubleText extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
        children: [
-      Text(bigText, style: AppStyles.Title_0),
+      Text(bigText, style: AppStyles.Title_0.copyWith(fontSize: 20)),
       InkWell(
         onTap: () {
 
-
+             func();
 
         },
         child: Text(smallText, style: AppStyles.Title_0.copyWith(color: AppStyles.primaryColor))

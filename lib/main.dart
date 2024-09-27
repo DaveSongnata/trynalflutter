@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:trynal/base/bottom_nav_bar.dart';
+import 'package:trynal/screens/all_tickets.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +14,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'SkyFlows',
+      title: 'SkyFlows', 
+      routes: {
+      "all_tickets":(context){return const AllTickets();} 
+      },
       theme: ThemeData(
         
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),

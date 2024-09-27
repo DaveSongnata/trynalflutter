@@ -1,8 +1,11 @@
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:trynal/base/res/media.dart';
 import 'package:trynal/base/res/styles/app_styles.dart';
+import 'package:trynal/base/utils/all_json.dart';
 import 'package:trynal/base/widgets/app_double_text.dart';
+import 'package:trynal/base/widgets/hotel.dart';
 import 'package:trynal/base/widgets/ticket_view.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -27,7 +30,9 @@ class HomeScreen extends StatelessWidget {
                   ),
                   padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15), 
 
-                  child: Column(children: [
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
                      Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -70,11 +75,50 @@ class HomeScreen extends StatelessWidget {
                                            ),
                      ),
                      const SizedBox(height: 25),
-                    const AppDoubleText(bigText: 'Próximos Voos',smallText: 'Ver Mais',),
+                     AppDoubleText(bigText: 'Próximos Voos',smallText: 'Ver Mais', func: () => Navigator.pushNamed(context, "all_tickets")),
                     const SizedBox(height: 25),
-                     TicketView(),
+                      SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: 
+                     
+
+                     Row(
+                      children:
+                       ticketList.take(2).map((singleTicket) {
+                        return TicketView(ticket: singleTicket);
+
+                       }
+                      
+                       ).toList(),
+          )
+                     ),
+                     AppDoubleText(bigText: 'Hotéis',smallText: 'Ver Mais',func: () {
+                 
+
+                     }),
+
+                      Container(height: 20),
+
+                     SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: Row( 
+                    children: 
+
+                  
+                  hotelList
+                  .take(10)
+                  .map((singleHotel) => Hotel(hotel: singleHotel)).toList(),
+                      
+
+                       
+                    
+
+                     )
+                    ),
                   ],     
+
                   ),
+             
                 )
 
                   
