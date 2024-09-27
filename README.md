@@ -14,8 +14,11 @@ O layout inclui:
 - Widgets Reaproveitáveis (Don't Repeat Yourself)
 
 ## Screenshots
-
+## Carrossel (Voos)
 ![Carrossel (Voos)](rmefiles/carrossel-voos.jpeg)
+## Carrossel (Hotéis)
 ![Carrossel (Hotéis)](rmefiles/carrossel-hoteis.jpeg)
+## Lista de Tickets
 ![Lista de Tickets](rmefiles/lista-tickets.jpeg)
+## Screenshot Completa
 ![Screenshot Completa](rmefiles/fullscreen.jpeg)
