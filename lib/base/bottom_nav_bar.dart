@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 //import 'package:trynal/base/res/styles/app_styles.dart';
 import 'package:trynal/screens/home_screen.dart';
+import 'package:trynal/screens/search/search_screen.dart';
 
 class BottomNavBar extends StatefulWidget{
 const BottomNavBar ({Key? key}): super (key: key);
@@ -15,7 +16,7 @@ class _BottomNavBarState extends State <BottomNavBar>{
 final appScreens = [
 
   const HomeScreen(),
-  const Text("Search"),
+  const SearchScreen(),
   const Text("Tickets"),
   const Text("Profile"),
 ];
